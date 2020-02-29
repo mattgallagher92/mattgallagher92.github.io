@@ -1,0 +1,172 @@
+/* Checkbox styling taken from
+   https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/checkboxes/_checkboxes.scss,
+   which is licenced under MIT.
+ */
+.checkbox__item {
+    display: block;
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    clear: left;
+}
+
+.checkbox__input {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: -2px;
+    left: -2px;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    opacity: 0;
+}
+
+.checkbox__label {
+    display: inline-block;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 0;
+    padding: 8px 15px 5px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.checkbox__label::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid currentColor;
+    background: transparent;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+    border-width: 4px;
+    box-shadow: 0 0 0 3px #fd0;
+}
+
+.checkbox__label::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    width: 18px;
+    height: 7px;
+    transform: rotate(-45deg);
+    border: solid;
+    border-width: 0 0 5px 5px;
+    border-top-color: transparent;
+    opacity: 0;
+    background: transparent;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    opacity: 1;
+}
+
+.prose {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.button { 
+    background-color: #236e35;
+    border-color: transparent;
+    box-shadow: 0 2px 0 #000;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 8px 10px 7px;
+    width: 100%;
+}
+
+.colour-circle {
+    border: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+
+.colour-circle--yellow {
+    background-color: #fef66f;
+}
+
+.colour-circle--red {
+    background-color: #e31836;
+}
+
+.colour-circle--blue {
+    background-color: #0069aa;
+}
+
+.colour-circle--black {
+    background-color: #000000;
+}
+
+.error-message {
+    color: #e31836;
+    display: block;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.fieldset-heading {
+    margin: 0;
+}
+
+.fieldset-hint {
+    color: #666666;
+    display: block;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: -5px 0 15px;
+}
+
+.fieldset-legend {
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group--error {
+    padding-left: 15px;
+    border-left: 5px solid #e31836;
+}
+
+.heading-xl {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+}
+
+.main {
+    box-sizing: border-box;
+    display: block;
+    padding: 15px;
+    width: 100%;
+}
+
+.dev-note {
+    color: red;
+    font-size: x-large;
+    text-align: center;
+}
