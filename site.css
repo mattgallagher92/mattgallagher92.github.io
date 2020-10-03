@@ -1,3 +1,56 @@
+/* Back link styling adapted from
+   https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/back-link/_back-link.scss,
+   which is licensed under MIT.
+ */
+ .back-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 1.14286;
+    /* Arial makes the text stand out a bit more */
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 14px;
+}
+
+/* < Back arrow */
+.back-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    margin: auto 0;
+    transform: rotate(225deg);
+    border: solid;
+    border-width: 1px 1px 0 0;
+    border-color: #505a5f;
+}
+
+/* Increase active area */
+.back-link::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    bottom: -14px;
+    left: 0;
+}
+
+.back-link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none
+}
+
 .button {
     background-color: #236e35;
     border-color: transparent;
@@ -41,7 +94,7 @@
 
 /* Checkbox styling adapted from
    https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/checkboxes/_checkboxes.scss,
-   which is licenced under MIT.
+   which is licensed under MIT.
  */
 .checkbox__item {
     display: block;
@@ -220,7 +273,7 @@
 .main {
     box-sizing: border-box;
     display: block;
-    padding: 15px;
+    padding: 20px 0;
     width: 100%;
 }
 
@@ -232,7 +285,7 @@
 
 /* Radio styling adapted from
    https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/radios/_index.scss,
-   which is licenced under MIT.
+   which is licensed under MIT.
  */
 .radio__item {
     display: block;
@@ -285,7 +338,7 @@
     box-shadow: 0 0 0 3px #fd0;
 }
 
-/* •  Radio button */
+/* • Radio button fill */
 .radio__label::after {
     content: "";
     position: absolute;
@@ -301,4 +354,10 @@
 
 .radio__input:checked + .radio__label::after {
     opacity: 1;
+}
+
+.width-container {
+    margin-left: max(15px, calc(15px + env(safe-area-inset-left)));
+    margin-right: max(15px, calc(15px + env(safe-area-inset-right)));
+    max-width: 960px;
 }
