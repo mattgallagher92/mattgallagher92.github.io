@@ -51,6 +51,10 @@
     text-decoration: none
 }
 
+.body {
+    margin: 0;
+}
+
 .button {
     background-color: #236e35;
     border-color: transparent;
@@ -59,7 +63,7 @@
     cursor: pointer;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     padding: 8px 10px 7px;
     width: 100%;
 }
@@ -221,6 +225,7 @@
 }
 
 .fieldset-heading {
+    font-size: inherit;
     margin: 0;
 }
 
@@ -228,16 +233,20 @@
     color: #666666;
     display: block;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    margin: -5px 0 15px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
 }
 
 .fieldset-legend {
+    font-size: 24px;
+    line-height: 25px;
     margin: 0 0 15px;
     padding: 0;
 }
 
 .form-group {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form-group--error {
@@ -254,16 +263,16 @@
     margin-top: 0;
 }
 
-.heading-xl {
-    font-size: 32px;
-    line-height: 35px;
-    margin-bottom: 30px;
-}
-
 .heading-l {
     font-size: 24px;
     line-height: 25px;
     margin-bottom: 20px;
+}
+
+.heading-m {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 15px;
 }
 
 .infection-cards {
