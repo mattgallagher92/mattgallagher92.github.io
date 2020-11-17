@@ -204,12 +204,6 @@
     background-color: #000000;
 }
 
-.dev-note {
-    color: red;
-    font-size: x-large;
-    text-align: center;
-}
-
 .error-message {
     color: #e31836;
     display: block;
@@ -284,6 +278,38 @@
     display: block;
     padding: 20px 0;
     width: 100%;
+}
+
+.number__label {
+    color: #0b0c0c;
+    font-family: "GDS Transport",arial,sans-serif;
+    font-size: 19px;
+    line-height: 1.31579;
+    padding: 8px 0 5px;
+    position: absolute;
+}
+
+.number__input {
+    appearance: none;
+    border: 2px solid #0b0c0c;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    height: 40px;
+    max-width: 6.1ex;
+    padding: 5px;
+    position: absolute;
+    right: 60px;
+    width: 100%;
+}
+
+.number__item {
+    clear: left;
+    display: block;
+    min-height: 40px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .prose {
